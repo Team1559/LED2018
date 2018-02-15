@@ -8,11 +8,11 @@ void setup() {
 }
 
 void loop() {
-  oneFive59(0, 0, 255);
+  oneFive59(0, 0, 255, 0);
   //zeroAnd44(0, 0, 255);
 }
 
-void oneFive59(int r, int g, int b)
+void oneFive59(int r, int g, int b, int d)
 {
   //1
   leds[76] = CRGB(r, g, b);
@@ -62,7 +62,7 @@ void oneFive59(int r, int g, int b)
   leds[153] = CRGB(r, g, b);
   leds[198] = CRGB(r, g, b);
   leds[241] = CRGB(r, g, b);
-   leds[240] = CRGB(r, g, b);
+  leds[240] = CRGB(r, g, b);
   leds[239] = CRGB(r, g, b);
   leds[238] = CRGB(r, g, b);
   leds[237] = CRGB(r, g, b);
@@ -102,15 +102,159 @@ for(int i = 0; i <= 43; i++)
 {
   leds[i] = CRGB::Yellow;
   FastLED.show();
-  delay(10);
+  delay(d);
   leds[i - 1] = CRGB::Black;
   FastLED.show();
-  delay(10);
-  leds[43] = CRGB::Black;
+  delay(d);
 }
+//Vertical right
+  leds[44] = CRGB::Yellow; //44
+  FastLED.show();
+  delay(d);
+  leds[43] = CRGB::Black;
+  FastLED.show();
+  delay(d);
+  
+  leds[131] = CRGB::Yellow; //131
+  FastLED.show();
+  delay(d);
+  leds[44] = CRGB::Black;
+  FastLED.show();
+  delay(d);
+  
+  leds[132] = CRGB::Yellow; //132
+  FastLED.show();
+  delay(d);
+  leds[131] = CRGB::Black;
+  FastLED.show();
+  delay(d);
 
-  }
-  }
+  leds[219] = CRGB::Yellow; //219
+  FastLED.show();
+  delay(d);
+  leds[132] = CRGB::Black;
+  FastLED.show();
+  delay(d);
+  
+  leds[220] = CRGB::Yellow; //220
+  FastLED.show();
+  delay(d);
+  leds[219] = CRGB::Black;
+  FastLED.show();
+  delay(d);
+    
+  leds[307] = CRGB::Yellow; //307
+  FastLED.show();
+  delay(d);
+  leds[220] = CRGB::Black;
+  FastLED.show();
+  delay(d);
+
+  leds[308] = CRGB::Yellow; //308
+  FastLED.show();
+  delay(d);
+  leds[307] = CRGB::Black;
+  FastLED.show();
+  delay(d);
+
+  leds[395] = CRGB::Yellow; //395
+  FastLED.show();
+  delay(d);
+  leds[308] = CRGB::Black;
+  FastLED.show();
+  delay(d);
+
+  leds[396] = CRGB::Yellow; //396
+  FastLED.show();
+  delay(d);
+  leds[395] = CRGB::Black;
+  FastLED.show();
+  delay(d);
+
+  leds[483] = CRGB::Yellow; //483
+  FastLED.show();
+  delay(d);
+  leds[396] = CRGB::Black;
+  FastLED.show();
+  delay(d);
+  leds[483] = CRGB::Black;
+
+  //Bottom
+for(int i = 483; i >= 439; i--)
+{
+  leds[i] = CRGB::Yellow;
+  FastLED.show();
+  delay(d);
+  leds[i + 1] = CRGB::Black;
+  FastLED.show();
+  delay(d);
+}
+//Vertical left
+  leds[440] = CRGB::Yellow;
+  FastLED.show();
+  delay(d);
+  leds[439] = CRGB::Black;
+  FastLED.show();
+  delay(d);
+  
+  leds[351] = CRGB::Yellow;
+  FastLED.show();
+  delay(d);
+  leds[440] = CRGB::Black;
+  FastLED.show();
+  delay(d);
+
+  leds[352] = CRGB::Yellow;
+  FastLED.show();
+  delay(d);
+  leds[351] = CRGB::Black;
+  FastLED.show();
+  delay(d);
+
+  leds[263] = CRGB::Yellow;
+  FastLED.show();
+  delay(d);
+  leds[352] = CRGB::Black;
+  FastLED.show();
+  delay(d);
+
+  leds[264] = CRGB::Yellow;
+  FastLED.show();
+  delay(d);
+  leds[263] = CRGB::Black;
+  FastLED.show();
+  delay(d);
+
+  leds[175] = CRGB::Yellow;
+  FastLED.show();
+  delay(d);
+  leds[264] = CRGB::Black;
+  FastLED.show();
+  delay(d);
+
+  leds[176] = CRGB::Yellow;
+  FastLED.show();
+  delay(d);
+  leds[175] = CRGB::Black;
+  FastLED.show();
+  delay(d);
+
+  leds[87] = CRGB::Yellow;
+  FastLED.show();
+  delay(d);
+  leds[176] = CRGB::Black;
+  FastLED.show();
+  delay(d);
+
+  leds[88] = CRGB::Yellow;
+  FastLED.show();
+  delay(d);
+  leds[87] = CRGB::Black;
+  FastLED.show();
+  delay(d);
+  leds[88] = CRGB::Black;
+ }
+}
 
 void zeroAnd44(int r, int g, int b)
 {
@@ -119,6 +263,9 @@ void zeroAnd44(int r, int g, int b)
   FastLED.show();
 
 }
+
+
+
 
 
 
