@@ -14,6 +14,7 @@ boolean blueState = true;
 
 Adafruit_NeoPixel strip = Adafruit_NeoPixel(STRIPSIZE, PIN, NEO_GRB + NEO_KHZ800);
 
+
 void setup() {
    // initialize the button pin as a input:
   pinMode(buttonPin, INPUT);
@@ -24,74 +25,75 @@ void setup() {
   strip.setBrightness(1000);  // Lower brightness and save eyeballs!
   strip.show(); // Initialize all pixels to 'off'
 }
-  int wait[] = {0};
+int wait[] = {0};
+  
 void loop() {
 
-  for(int i = 0; i < 100; i++)
+  for(int i = 0; i < 3; i++)
   {
-    sparkle();
+    pinkOrange();
   }
   transition1();
 //------------------------------------------
-  for(int i = 0; i < 2; i++)
+  for(int i = 0; i < 5; i++)
   {
     flower();
   }
   transition1();
 //------------------------------------------
-  for(int i = 0; i < 2; i++)
-  {
-    camera();
-  }
+  //for(int i = 0; i < 2; i++)
+  //{
+    //camera();
+  //}
 //------------------------------------------  
-  for(int i = 0; i < 40; i++)
+  for(int i = 0; i < 120; i++)
   {
     chase();
   }
   transition1();
 //------------------------------------------
-for(int i = 0; i < 50; i++)
-  {
-    fire();
-  }
-    transition1();
+//for(int i = 0; i < 50; i++)
+  //{
+    //fire();
+  //}
+    //transition1();
 //------------------------------------------
-  for(int i = 0; i < 1; i++)
-  {
-    rainbowCycle(5);
-  }
-  transition1();
-//------------------------------------------
-for(int i = 0; i < 100; i++)
+for(int i = 0; i < 350; i++)
   {
     shimmer();
   }
   transition1();
 //------------------------------------------
-for(int i = 0; i < 5; i++)
-  {
-    pinkOrange();
-  }
-  
-  transition1();
-//------------------------------------------
-for(int i = 0; i < 5; i++)
-  {
-    miami();
-  }
-  
-  transition1();
-//------------------------------------------
-  for(int i = 0; i < strip.numPixels(); i++)
+for(int i = 0; i < strip.numPixels(); i++)
   {
       strip.setPixelColor(i, 0, 0, 0);
       strip.show();  
   }
-for(int i = 0; i < 5; i++)
+for(int i = 0; i < 23; i++)
   {
     miami();
   }
   transition1();
+//------------------------------------------
+  for(int i = 0; i < 1; i++)
+  {
+    rainbowCycle(8);
+  }
+  transition1();
+//------------------------------------------
+  for(int i = 0; i < 200; i++)
+  {
+    sparkle();
+  }
+  transition1();
+//------------------------------------------
+//for(int i = 0; i < 10; i++)
+  //{
+    //neon();
+    //delay(200);
+  //}
+  //transition1();
+//------------------------------------------
 }
 void sparkle()
 {
@@ -319,6 +321,42 @@ void miami() //thanks hnh
       strip.setPixelColor(random(0,strip.numPixels()), 0, 250, 133);
       delay(3);
       strip.show();
+  }
+}
+
+void neon()
+{
+  for(int i = 0; i <= 200; i++)
+  {
+    if(random(0,100) == 50)
+    {
+      for(int j = 0; j < strip.numPixels(); j++)
+    {
+      strip.setPixelColor(j, i, 255, i/2);
+    }
+    strip.show();
+    }
+    for(int j = 0; j < strip.numPixels(); j++)
+    {
+      strip.setPixelColor(j, i, 0, i/2);
+    }
+    strip.show();
+  }
+  for(int i = 200; i >= 0; i--)
+  {
+    if(random(0,100) == 50)
+    {
+      for(int j = 0; j < strip.numPixels(); j++)
+    {
+      strip.setPixelColor(j, i, 255, i/2);
+    }
+    strip.show();
+    }
+    for(int j = 0; j < strip.numPixels(); j++)
+    {
+      strip.setPixelColor(j, i, 0, i/2);
+    }
+    strip.show();
   }
 }
 
